@@ -12,58 +12,8 @@
 <a href="index.php"> Home </a> <br>
 <a href="second.php"> Second </a> <br> <br>
 
-
-  <?php
-
-  class Member
-  {
-    public $username = "";
-
-    private $loggedIn =  false;
-    public function login()
-    {
-      $this->loggedIn = true;
-    }
-
-    public function logout()
-    {
-      $this->loggedIn = false;
-    }
-
-    public function isLoggedIn()
-    {
-      return $this->loggedIn;
-    }
-  }
-
-  class Administrator extends Member
-  {
-    public function createForum($forumName)
-    {
-      echo "$this->username crated a new forum: $forumName" . "<br>";
-    }
-
-    public function banMember($member)
-    {
-      echo "$this->username banned the member: $member->username";
-    }
-  }
-
-  $member = new Member();
-  $member->username = "S A Faroque";
-  $member->login();
-  echo $member->username . " is " . ($member->isLoggedIn() ? "logged in" : "logged out") . "<br>";
-
-  $admin = new Administrator();
-  $admin->username = "Raju";
-  $admin->login();
-  echo $admin->username . " is " . ($member->isLoggedIn() ? "logged in" : "logged out") . "<br>";
-
-  $admin->createForum("w3prgrammers");
-
-  $admin->banMember($member);
-
-  ?>
+<p> I am second page. </p>
+  
 </body>
 
 </html>
